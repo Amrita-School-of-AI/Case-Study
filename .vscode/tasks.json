@@ -40,7 +40,12 @@
       "label": "Run MPI Program",
       "type": "shell",
       "command": "mpirun",
-      "args": ["-n", "4", "${fileDirname}/${fileBasenameNoExtension}"],
+      "args": [
+        "-np",
+        "4",
+        "--oversubscribe",
+        "${fileDirname}/${fileBasenameNoExtension}"
+      ],
       "group": {
         "kind": "build",
         "isDefault": true
@@ -50,6 +55,19 @@
         "panel": "new"
       },
       "problemMatcher": []
+    },
+    {
+      "label": "Build and Run MPI Program",
+      "dependsOrder": "sequence",
+      "dependsOn": ["C/C++: mpic++ build active file", "Run MPI Program"],
+      "group": {
+        "kind": "build",
+        "isDefault": false
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
     }
   ],
   "version": "2.0.0"
