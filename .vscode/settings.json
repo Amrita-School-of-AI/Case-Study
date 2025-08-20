@@ -1,6 +1,7 @@
 {
   "files.associations": {
     "*.cu": "cuda-cpp",
-    "ostream": "cpp"
+    "ostream": "cpp",
+    "iostream": "cpp"
   }
 }
