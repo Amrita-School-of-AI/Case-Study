@@ -3,7 +3,7 @@
 
 int main()
 {
-#pragma omp parallel num_threads(4)
+#pragma omp parallel num_threads(5)
     {
 #pragma omp sections
         {
